@@ -18,7 +18,7 @@ export class AppComponent implements OnInit
 
     private readonly MAX_ATTEMPTS = 3;
 
-    constructor(private _logService: LogService){}
+    constructor(private _logService: LogService) { }
 
     ngOnInit()
     {
@@ -37,7 +37,7 @@ export class AppComponent implements OnInit
 
     checkGuess(guess: string)
     {
-        if (guess === "" || isNaN(+guess))
+        if (guess === "" || isNaN(+guess) || this.state !== "fresh")
         {
             return;
         }

@@ -20,7 +20,6 @@ export class LogService
         {
             console.log("Error occurred while saving the guess to the database:", err);
         }
-
     }
 
     logToDatabase(guess: number, solution: number)

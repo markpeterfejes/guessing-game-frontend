@@ -9,23 +9,23 @@ export class LogService
     apiUrl = "http://localhost:3000";
 
     constructor(private http: Http) { }
-    async log(guess: number)
+    async log(guess: number, solution: number)
     {
         try
         {
             console.log("The user guessed:", guess);
-            await this.logToDatabase(guess);
+            await this.logToDatabase(guess, solution);
         }
         catch (err)
         {
-            console.log("Error occurred while saving the guiess to the database:", err);
+            console.log("Error occurred while saving the guess to the database:", err);
         }
 
     }
 
-    logToDatabase(guess: number)
+    logToDatabase(guess: number, solution: number)
     {
-        return this.http.post(this.apiUrl + "/log-guess", { guess: guess })
+        return this.http.post(this.apiUrl + "/log-guess", { guess, solution })
             .toPromise();
     }
 }

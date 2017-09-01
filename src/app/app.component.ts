@@ -65,6 +65,6 @@ export class AppComponent implements OnInit
     private logGuess(guess: string)
     {
         this.guesses.push(+guess);
-        this._logService.log(+guess);
+        this._logService.log(+guess, this.number);
     }
 }

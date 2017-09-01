@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "alexiv.vscode-angular2-files",
+        "Angular.ng-template",
+        "anseki.vscode-color",
+        "christian-kohler.npm-intellisense",
+        "eg2.tslint",
+        "eg2.vscode-npm-script",
+        "Google.ng-template",
+        "msjsdiag.debugger-for-chrome",
+        "PeterJausovec.vscode-docker",
+        "pmneo.tsimporter",
+        "slevesque.perforce",
+        "streetsidesoftware.code-spell-checker",
+        "dweber019.vscode-style-formatter"
+    ]
+}

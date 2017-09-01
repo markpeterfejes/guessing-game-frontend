@@ -9,7 +9,7 @@
 
     </div>
 
-    <button (click)="checkGuess(input.value)" class="btn btn-success" [ngClass]="{disabled: state === 'win' || state === 'lost'}">Guess!</button>
+    <button (click)="checkGuess(input.value)" class="btn btn-success" [ngClass]="{disabled: state === 'won' || state === 'lost'}">Guess!</button>
     <button (click)="newGame()" class="btn btn-primary" *ngIf="state !== 'fresh'">New Game!</button>
 
     <p class="end-message" *ngIf="state === 'lost'"> Sorry, out of attempts! The number was: {{number}}</p>

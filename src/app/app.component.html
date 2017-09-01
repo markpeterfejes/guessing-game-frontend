@@ -9,14 +9,14 @@
 
     </div>
 
-    <button (click)="checkGuess(input.value)" class="btn btn-success" [ngClass]="{disabled: state === 'won' || state === 'lost'}">Guess!</button>
+    <button id="guessButton" (click)="checkGuess(input.value)" class="btn btn-success" [ngClass]="{disabled: state === 'won' || state === 'lost'}">Guess!</button>
     <button (click)="newGame()" class="btn btn-primary" *ngIf="state !== 'fresh'">New Game!</button>
 
-    <div class="alert alert-danger end-message col-4" *ngIf="state === 'lost'"> Sorry, out of attempts! The number was: <strong>{{number}}</strong></div>
-    <div class="alert alert-success end-message col-4" *ngIf="state === 'won'"> Congratulations! You've guessed the number <strong>{{number}}</strong>!</div>
+    <div class="alert alert-danger end-message col-4" *ngIf="state === 'lost'">Sorry, out of attempts! The number was: <strong>{{number}}</strong></div>
+    <div class="alert alert-success end-message col-4" *ngIf="state === 'won'">Congratulations! You've guessed the number <strong>{{number}}</strong>!</div>
 
     <h5 *ngIf="guesses[0]" id="previousGuesses"> Previous Guesses:</h5>
     <ul id="guessList" class="list-group col-2">
-        <li class="list-group-item" *ngFor="let guess of guesses">{{guess}}</li>
+        <li class="list-group-item guess-list-item" *ngFor="let guess of guesses">{{guess}}</li>
     </ul>
 </div>
